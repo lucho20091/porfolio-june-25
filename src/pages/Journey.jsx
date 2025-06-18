@@ -424,7 +424,7 @@ export default function Journey() {
             </TableHeader>
             <TableBody>
               <TableRow>
-                <TableCell>Portfolio</TableCell>
+                <TableCell>Portfolio ⭐⭐⭐⭐</TableCell>
                 <TableCell className="">
                   <a
                     href="https://github.com/lucho20091/porfolio-june-25"
