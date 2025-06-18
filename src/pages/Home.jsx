@@ -17,7 +17,10 @@ export default function Home() {
   return (
     <div className="">
       <HomeHero scrollToTarget={scrollToTarget} />
-      <div className="container p-4 md:p-8 " ref={targetRef}>
+      <div
+        className="container p-4 md:p-8 max-w-screen-xl mx-auto"
+        ref={targetRef}
+      >
         <div className="flex flex-col gap-4 md:gap-6">
           <h2 className="mt-16 text-center text-2xl font-bold">
             My Recent Projects
@@ -31,7 +34,7 @@ export default function Home() {
           <Tabs />
         </div>
       </div>
-      <div className="container p-4 pb-8 md:p-8 md:pb-24">
+      <div className="container p-4 pb-8 md:p-8 md:pb-24 max-w-screen-xl mx-auto">
         <Contact />
       </div>
     </div>
