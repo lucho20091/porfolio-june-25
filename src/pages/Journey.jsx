@@ -16,10 +16,10 @@ export default function Journey() {
       <h1 className="text-2xl md:text-4xl font-bold">
         My Web Development Journey
       </h1>
-      <div className="text-xl flex flex-col gap-4 md:gap-8 mt-0 md:mt-8">
+      <div className="text-md md:text-xl flex flex-col gap-4 md:gap-8 mt-0 md:mt-8">
         <div className="HTML and CSS">
-          <h2 className="text-xl md:text-2xl mt-2 md:mt-0 font-semibold">
-            Getting Started with HTML & CSS
+          <h2 className="text-xl md:text-2xl mt-2 md:mt-0 font-bold mb-2 italic">
+            1. Getting Started with HTML & CSS
           </h2>
           I began with the basics on{" "}
           <a
@@ -84,8 +84,8 @@ export default function Journey() {
           </Table>
         </div>
         <div className="HTML, CSS and JS">
-          <h2 className="text-xl md:text-2xl mt-2 md:mt-0 font-semibold">
-            JavaScript: Learning to Think Like a Computer
+          <h2 className="text-xl md:text-2xl mt-2 md:mt-0 font-bold mb-2 italic">
+            2. JavaScript: Learning to Think Like a Computer
           </h2>
           JavaScript taught me to break down problems step by step. The initial
           learning curve felt manageable, variables, if-else statements, loops,
@@ -141,8 +141,8 @@ export default function Journey() {
           </Table>
         </div>
         <div className="Firebase">
-          <h2 className="text-xl md:text-2xl mt-2 md:mt-0 font-semibold">
-            Firebase: Simple and Powerful
+          <h2 className="text-xl md:text-2xl mt-2 md:mt-0 font-bold mb-2 italic">
+            3. Firebase: Simple and Powerful
           </h2>
           Firebase feels magical, easy to use with excellent documentation. It's
           perfect for small projects, especially since it's free to start.
@@ -188,8 +188,8 @@ export default function Journey() {
           </Table>
         </div>
         <div className="Responsive Design">
-          <h2 className="text-xl md:text-2xl mt-2 md:mt-0 font-semibold">
-            Responsive Design: The Mobile-First Revelation
+          <h2 className="text-xl md:text-2xl mt-2 md:mt-0 font-bold mb-2 italic">
+            4. Responsive Design: The Mobile-First Revelation
           </h2>
           I initially struggled with media queries and responsive design
           principles. The mobile-first approach didn't click until I started
@@ -241,8 +241,8 @@ export default function Journey() {
           </Table>
         </div>
         <div className="React">
-          <h2 className="text-xl md:text-2xl mt-2 md:mt-0 font-semibold">
-            React: From Imperative to Declarative
+          <h2 className="text-xl md:text-2xl mt-2 md:mt-0 font-bold mb-2 italic">
+            5. React: From Imperative to Declarative
           </h2>
           Starting with React confused me, I couldn't distinguish between React
           features and ES6 syntax. Strengthening my ES6 knowledge made React
@@ -295,8 +295,8 @@ export default function Journey() {
           </Table>
         </div>
         <div className="backend - Express">
-          <h2 className="text-xl md:text-2xl mt-2 md:mt-0 font-semibold">
-            Backend with Express: The MVC Principle
+          <h2 className="text-xl md:text-2xl mt-2 md:mt-0 font-bold mb-2 italic">
+            6. Backend with Express: The MVC Principle
           </h2>
           Following a GitHub backend course introduced me to the MVC principle,
           which became my organizing framework:
@@ -359,8 +359,8 @@ export default function Journey() {
           </Table>
         </div>
         <div className="Next">
-          <h2 className="text-xl md:text-2xl mt-2 md:mt-0 font-semibold">
-            Next.js: Server Side Rendering
+          <h2 className="text-xl md:text-2xl mt-2 md:mt-0 font-bold mb-2 italic">
+            7. Next.js: Server Side Rendering
           </h2>
           The biggest hurdle with full-stack apps was finding affordable server
           hosting for backend code. Next.js solved this perfectly by enabling
@@ -408,7 +408,7 @@ export default function Journey() {
           </Table>
         </div>
         <div className="This">
-          <h2 className="text-xl md:text-2xl mt-2 md:mt-0 font-semibold">
+          <h2 className="text-xl md:text-2xl mt-2 md:mt-0 font-bold mb-2 italic">
             This Project
           </h2>
           <Table>

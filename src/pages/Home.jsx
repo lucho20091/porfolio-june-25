@@ -1,7 +1,7 @@
 import HomeHero from "@/components/HomeHero";
 import Tabs from "@/components/HomeProjectsTabs";
 import Contact from "@/components/HomeContact";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+
 import { useRef } from "react";
 
 export default function Home() {
@@ -27,9 +27,7 @@ export default function Home() {
             in front-end development
           </p>
         </div>
-        <div className="mt-4 md:mt-8 relative">
-          <FaArrowLeft className="absolute top-[-24px] md:top-[-24px] left-4 animate-bounce text-2xl" />
-          <FaArrowRight className="absolute top-[-24px] md:top-[-24px] right-4 animate-bounce text-2xl" />
+        <div className="mt-8 md:mt-12 relative">
           <Tabs />
         </div>
       </div>

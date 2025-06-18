@@ -4,7 +4,7 @@ import { FaArrowDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 export default function HomeHero({ scrollToTarget }) {
   return (
-    <div className="container h-[calc(100dvh-54px)] md:h-[calc(100dvh-70px)] p-4 md:p-8 max-w-screen-xl mx-auto relative">
+    <div className="container h-[calc(100vh-54px)] md:h-[calc(100vh-70px)] p-4 md:p-8 max-w-screen-xl mx-auto relative">
       <div className="Main-Element h-full">
         <div className="Intro h-full text-center flex flex-col gap-4 md:gap-6 justify-center items-center">
           <p className="text-gray-700 text-lg">Hello, I'm</p>
