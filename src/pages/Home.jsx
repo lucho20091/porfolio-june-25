@@ -34,7 +34,7 @@ export default function Home() {
           <Tabs />
         </div>
       </div>
-      <div className="container p-4 pb-8 md:p-8 md:pb-24 max-w-screen-xl mx-auto">
+      <div className="container p-4 pb-12 md:p-8 md:pb-24 max-w-screen-xl mx-auto">
         <Contact />
       </div>
     </div>

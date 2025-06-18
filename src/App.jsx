@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import * as ROUTES from "./constants/routes";
 import { StickyNavbar } from "./components/Navbar";
+import { SimpleFooter } from "./components/Footer";
 import Home from "./pages/Home";
 import Journey from "./pages/Journey";
 import SignIn from "./pages/SignIn";
@@ -17,6 +18,7 @@ function App() {
         <Route path={ROUTES.SIGNIN} element={<SignIn />} />
         <Route path={ROUTES.LOGIN} element={<Login />} />
       </Routes>
+      <SimpleFooter />
       <ToastContainer />
     </BrowserRouter>
   );
