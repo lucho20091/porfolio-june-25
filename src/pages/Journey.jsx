@@ -434,7 +434,7 @@ export default function Journey() {
                   </a>
                 </TableCell>
                 <TableCell className="">
-                  <a href="" target="_blank">
+                  <a href="https://portfolio.lucho.uk/" target="_blank">
                     <CodeXml className="mx-auto md:ml-2" />
                   </a>
                 </TableCell>
