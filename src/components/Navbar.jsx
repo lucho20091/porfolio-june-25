@@ -40,7 +40,7 @@ export function StickyNavbar() {
   );
 
   return (
-    <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 md:px-8 md:py-4">
+    <Navbar className="sticky top-0 z-30 h-max max-w-full rounded-none px-4 py-2 md:px-8 md:py-4 bg-white">
       <div className="flex items-center justify-between text-blue-gray-900 max-w-screen-xl mx-auto">
         <Link
           to={ROUTES.HOME}
