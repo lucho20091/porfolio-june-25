@@ -42,8 +42,10 @@ export default function Journey() {
           >
             Replit
           </a>{" "}
-          before joining an online community to take a more serious approach to
-          web development.
+          before joining an online community to take a more serious approach to{" "}
+          <span className="double-underline animate-bounce inline-block font-bold">
+            web development.
+          </span>
           <Table>
             <TableHeader>
               <TableRow>
@@ -402,6 +404,47 @@ export default function Journey() {
                     </TableCell>
                   </TableRow>
                 ))}
+            </TableBody>
+          </Table>
+        </div>
+        <div className="This">
+          <h2 className="text-xl md:text-2xl mt-2 md:mt-0 font-semibold">
+            This Project
+          </h2>
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>Name</TableHead>
+                <TableHead>Github</TableHead>
+                <TableHead>Website</TableHead>
+                <TableHead className="hidden md:flex justify-start items-center	">
+                  Technologies
+                </TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              <TableRow>
+                <TableCell>Portfolio</TableCell>
+                <TableCell className="">
+                  <a
+                    href="https://github.com/lucho20091/porfolio-june-25"
+                    target="_blank"
+                  >
+                    <Github className="mx-auto md:ml-2" />
+                  </a>
+                </TableCell>
+                <TableCell className="">
+                  <a href="" target="_blank">
+                    <CodeXml className="mx-auto md:ml-2" />
+                  </a>
+                </TableCell>
+                <TableCell className="items-center space-x-4 hidden md:flex">
+                  <span>React</span>
+                  <span>Tailwind</span>
+                  <span>Shadcn</span>
+                  <span>Material Tailwind</span>
+                </TableCell>
+              </TableRow>
             </TableBody>
           </Table>
         </div>
