@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Journey from "./pages/Journey";
 import SignIn from "./pages/SignIn";
 import Login from "./pages/Login";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path={ROUTES.SIGNIN} element={<SignIn />} />
         <Route path={ROUTES.LOGIN} element={<Login />} />
       </Routes>
+      <ToastContainer />
     </BrowserRouter>
   );
 }

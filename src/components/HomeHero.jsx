@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowDown } from "react-icons/fa";
-export default function HomeHero() {
+import { Link } from "react-router-dom";
+export default function HomeHero({ scrollToTarget }) {
   return (
     <div className="container h-[calc(100dvh-54px)] md:h-[calc(100dvh-70px)] p-4 md:p-8 max-w-screen-xl mx-auto relative">
       <div className="Main-Element h-full">
@@ -13,7 +14,7 @@ export default function HomeHero() {
             Crafting beautiful, responsive, and user-friendly web experiences
             with modern technologies
           </p>
-          <Button size="lg" className="py-7">
+          <Button size="lg" className="py-7" onClick={scrollToTarget}>
             <span className="animate-pulse font-bold text-lg">
               View My Work
             </span>{" "}

@@ -1,10 +1,18 @@
 /* 
 
 max-w-screen-xl for Elements
+max-w-screen-lg for journey (it looks fine)
 max-w-xl for some text element on home
 p-4 for mobile
 p-8 for desktop
 md for breakpoint 
 text-lg para desktop for now
 gray-700
+
+para texto estoy usando
+2xl para headers
+lg para texto abajo
+
+gap-4
+md:gap-6
 */
