@@ -116,7 +116,7 @@ export default function ProjectsTabs() {
               <div className="grid gap-4 my-4 pb-4">
                 <div className="relative group">
                   <img
-                    className="h-96 w-full max-w-full rounded-lg object-cover			object-top object-center md:h-[480px]"
+                    className="h-64 md:h-96 w-full max-w-full rounded-lg object-cover object-top object-center md:h-[480px]"
                     src={`${recentProjects[active].projectName}.jpg`}
                     alt=""
                   />
