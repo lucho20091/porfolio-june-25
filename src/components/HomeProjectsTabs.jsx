@@ -178,7 +178,9 @@ export default function ProjectsTabs() {
                         <Dialog>
                           <DialogTrigger
                             className="text-left"
-                            onClick={() => setActive(index)}
+                            {...(activeTab === "Recent" && {
+                              onClick: () => setActive(index),
+                            })}
                           >
                             {
                               projectMap.projectName
