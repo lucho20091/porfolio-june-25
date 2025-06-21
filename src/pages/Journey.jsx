@@ -59,26 +59,28 @@ export default function Journey() {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Name</TableHead>
+                <TableHead className="w-3/5 md:w-2/6">Name</TableHead>
                 <TableHead>Github</TableHead>
                 <TableHead>Website</TableHead>
-                <TableHead className="hidden md:flex justify-start items-center	">
+                <TableHead className="w-3/5 md:w-2/6 hidden md:table-cell">
                   Technologies
                 </TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
               {data.slice(0, 2).map((item) => (
-                <TableRow key={item.id}>
-                  <TableCell>{item.projectName.replace(/⭐/g, "")}</TableCell>
+                <TableRow key={item.id} className="grid-cols-4 md:grid-cols-6">
+                  <TableCell>
+                    {item.projectName.replace(/⭐/g, "").split(" - ")[0]}
+                  </TableCell>
                   <TableCell className="">
                     <a href={item.github} target="_blank">
-                      <Github className="mx-auto md:ml-2" />
+                      <Github className="text-center ml-3" />
                     </a>
                   </TableCell>
                   <TableCell className="">
                     <a href={item.website} target="_blank">
-                      {item.website && <CodeXml className="mx-auto md:ml-2" />}
+                      {item.website && <CodeXml className="text-center ml-3" />}
                     </a>
                   </TableCell>
                   <TableCell className="items-center space-x-4 hidden md:flex">
@@ -113,10 +115,10 @@ export default function Journey() {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Name</TableHead>
+                <TableHead className="w-3/5 md:w-2/6">Name</TableHead>
                 <TableHead>Github</TableHead>
                 <TableHead>Website</TableHead>
-                <TableHead className="hidden md:flex justify-start items-center	">
+                <TableHead className="w-3/5 md:w-2/6 hidden md:table-cell">
                   Technologies
                 </TableHead>
               </TableRow>
@@ -132,16 +134,18 @@ export default function Journey() {
                 )
                 .map((item) => (
                   <TableRow key={item.id}>
-                    <TableCell>{item.projectName.replace(/⭐/g, "")}</TableCell>
+                    <TableCell>
+                      {item.projectName.replace(/⭐/g, "").split(" - ")[0]}
+                    </TableCell>
                     <TableCell className="">
                       <a href={item.github} target="_blank">
-                        <Github className="mx-auto md:ml-2" />
+                        <Github className="text-center ml-3" />
                       </a>
                     </TableCell>
                     <TableCell className="">
                       <a href={item.website} target="_blank">
                         {item.website && (
-                          <CodeXml className="mx-auto md:ml-2" />
+                          <CodeXml className="text-center ml-3" />
                         )}
                       </a>
                     </TableCell>
@@ -173,10 +177,10 @@ export default function Journey() {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Name</TableHead>
+                <TableHead className="w-3/5 md:w-2/6">Name</TableHead>
                 <TableHead>Github</TableHead>
                 <TableHead>Website</TableHead>
-                <TableHead className="hidden md:flex justify-start items-center	">
+                <TableHead className="w-3/5 md:w-2/6 hidden md:table-cell">
                   Technologies
                 </TableHead>
               </TableRow>
@@ -186,16 +190,18 @@ export default function Journey() {
                 .filter((item) => item.technologies.includes("Firebase"))
                 .map((item) => (
                   <TableRow key={item.id}>
-                    <TableCell>{item.projectName.replace(/⭐/g, "")}</TableCell>
+                    <TableCell>
+                      {item.projectName.replace(/⭐/g, "").split(" - ")[0]}
+                    </TableCell>
                     <TableCell className="">
                       <a href={item.github} target="_blank">
-                        <Github className="mx-auto md:ml-2" />
+                        <Github className="text-center ml-3" />
                       </a>
                     </TableCell>
                     <TableCell className="">
                       <a href={item.website} target="_blank">
                         {item.website && (
-                          <CodeXml className="mx-auto md:ml-2" />
+                          <CodeXml className="text-center ml-3" />
                         )}
                       </a>
                     </TableCell>
@@ -228,10 +234,10 @@ export default function Journey() {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Name</TableHead>
+                <TableHead className="w-3/5 md:w-2/6">Name</TableHead>
                 <TableHead>Github</TableHead>
                 <TableHead>Website</TableHead>
-                <TableHead className="hidden md:flex justify-start items-center	">
+                <TableHead className="w-3/5 md:w-2/6 hidden md:table-cell">
                   Technologies
                 </TableHead>
               </TableRow>
@@ -246,16 +252,18 @@ export default function Journey() {
                 )
                 .map((item) => (
                   <TableRow key={item.id}>
-                    <TableCell>{item.projectName.replace(/⭐/g, "")}</TableCell>
+                    <TableCell>
+                      {item.projectName.replace(/⭐/g, "").split(" - ")[0]}
+                    </TableCell>
                     <TableCell className="">
                       <a href={item.github} target="_blank">
-                        <Github className="mx-auto md:ml-2" />
+                        <Github className="text-center ml-3" />
                       </a>
                     </TableCell>
                     <TableCell className="">
                       <a href={item.website} target="_blank">
                         {item.website && (
-                          <CodeXml className="mx-auto md:ml-2" />
+                          <CodeXml className="text-center ml-3" />
                         )}
                       </a>
                     </TableCell>
@@ -289,10 +297,10 @@ export default function Journey() {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Name</TableHead>
+                <TableHead className="w-3/5 md:w-2/6">Name</TableHead>
                 <TableHead>Github</TableHead>
                 <TableHead>Website</TableHead>
-                <TableHead className="hidden md:flex justify-start items-center	">
+                <TableHead className="w-3/5 md:w-2/6 hidden md:table-cell">
                   Technologies
                 </TableHead>
               </TableRow>
@@ -306,16 +314,18 @@ export default function Journey() {
                 )
                 .map((item) => (
                   <TableRow key={item.id}>
-                    <TableCell>{item.projectName.replace(/⭐/g, "")}</TableCell>
+                    <TableCell>
+                      {item.projectName.replace(/⭐/g, "").split(" - ")[0]}
+                    </TableCell>
                     <TableCell className="">
                       <a href={item.github} target="_blank">
-                        <Github className="mx-auto md:ml-2" />
+                        <Github className="text-center ml-3" />
                       </a>
                     </TableCell>
                     <TableCell className="">
                       <a href={item.website} target="_blank">
                         {item.website && (
-                          <CodeXml className="mx-auto md:ml-2" />
+                          <CodeXml className="text-center ml-3" />
                         )}
                       </a>
                     </TableCell>
@@ -363,10 +373,10 @@ export default function Journey() {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Name</TableHead>
+                <TableHead className="w-3/5 md:w-2/6">Name</TableHead>
                 <TableHead>Github</TableHead>
                 <TableHead>Website</TableHead>
-                <TableHead className="hidden md:flex justify-start items-center	">
+                <TableHead className="w-3/5 md:w-2/6 hidden md:table-cell">
                   Technologies
                 </TableHead>
               </TableRow>
@@ -376,16 +386,18 @@ export default function Journey() {
                 .filter((item) => item.technologies.includes("Express"))
                 .map((item) => (
                   <TableRow key={item.id}>
-                    <TableCell>{item.projectName.replace(/⭐/g, "")}</TableCell>
+                    <TableCell>
+                      {item.projectName.replace(/⭐/g, "").split(" - ")[0]}
+                    </TableCell>
                     <TableCell className="">
                       <a href={item.github} target="_blank">
-                        <Github className="mx-auto md:ml-2" />
+                        <Github className="text-center ml-3" />
                       </a>
                     </TableCell>
                     <TableCell className="">
                       <a href={item.website} target="_blank">
                         {item.website && (
-                          <CodeXml className="mx-auto md:ml-2" />
+                          <CodeXml className="text-center ml-3" />
                         )}
                       </a>
                     </TableCell>
@@ -418,10 +430,10 @@ export default function Journey() {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Name</TableHead>
+                <TableHead className="w-3/5 md:w-2/6">Name</TableHead>
                 <TableHead>Github</TableHead>
                 <TableHead>Website</TableHead>
-                <TableHead className="hidden md:flex justify-start items-center	">
+                <TableHead className="w-3/5 md:w-2/6 hidden md:table-cell">
                   Technologies
                 </TableHead>
               </TableRow>
@@ -431,16 +443,18 @@ export default function Journey() {
                 .filter((item) => item.technologies.includes("Next"))
                 .map((item) => (
                   <TableRow key={item.id}>
-                    <TableCell>{item.projectName.replace(/⭐/g, "")}</TableCell>
+                    <TableCell>
+                      {item.projectName.replace(/⭐/g, "").split(" - ")[0]}
+                    </TableCell>
                     <TableCell className="">
                       <a href={item.github} target="_blank">
-                        <Github className="mx-auto md:ml-2" />
+                        <Github className="text-center ml-3" />
                       </a>
                     </TableCell>
                     <TableCell className="">
                       <a href={item.website} target="_blank">
                         {item.website && (
-                          <CodeXml className="mx-auto md:ml-2" />
+                          <CodeXml className="text-center ml-3" />
                         )}
                       </a>
                     </TableCell>
@@ -463,10 +477,10 @@ export default function Journey() {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Name</TableHead>
+                <TableHead className="w-3/5 md:w-2/6">Name</TableHead>
                 <TableHead>Github</TableHead>
                 <TableHead>Website</TableHead>
-                <TableHead className="hidden md:flex justify-start items-center	">
+                <TableHead className="w-3/5 md:w-2/6 hidden md:table-cell">
                   Technologies
                 </TableHead>
               </TableRow>
