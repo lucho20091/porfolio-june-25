@@ -26,7 +26,7 @@ export function StickyNavbar() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-bold"
+        className="py-1.5 font-bold"
       >
         <Link
           to={ROUTES.JOURNEY}
@@ -49,8 +49,8 @@ export function StickyNavbar() {
         >
           Luis M.
         </Link>
-        <div className="flex items-center gap-4">
-          <div className="mr-4">{navList}</div>
+        <div className="flex items-center justify-end">
+          <div className="">{navList}</div>
         </div>
       </div>
     </Navbar>
