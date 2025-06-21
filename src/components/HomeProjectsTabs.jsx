@@ -83,7 +83,11 @@ export default function ProjectsTabs() {
   }, [activeTab]);
 
   return (
-    <Tabs key={activeTab} value={activeTab} className="w-full">
+    <Tabs
+      key={activeTab}
+      value={activeTab}
+      className="w-full shadow-2xl pt-4 md:pt-8"
+    >
       <button
         onClick={moveTabLeft}
         className="absolute top-[-34px] md:top-[-36px] left-0 px-4 py-2"
@@ -114,9 +118,9 @@ export default function ProjectsTabs() {
           <TabPanel key={tech} value={tech} className="w-full">
             {activeTab === "Recent" && (
               <div className="grid gap-4 my-4 pb-4">
-                <div className="relative group">
+                <div className="relative group shadow-2xl">
                   <img
-                    className="h-64 md:h-96 w-full max-w-full rounded-lg object-cover object-top object-center md:h-[480px]"
+                    className="h-64 md:h-96 w-full max-w-full rounded-lg object-cover object-top object-center md:h-[480px] "
                     src={`${recentProjects[active].projectName}.jpg`}
                     alt=""
                   />
@@ -130,7 +134,7 @@ export default function ProjectsTabs() {
                     target="_blank"
                   ></a>
                   <div className="absolute bottom-2 left-1 md:bottom-4 flex md:left-4 gap-4">
-                    <span className="text-md md:text-2xl font-bold bg-white px-2 py-1 md:px-4 md:py-2 select-none rounded-2xl flex gap-4 items-center shadow-2xl">
+                    <span className="text-md md:text-2xl font-bold bg-white px-2 py-1 md:px-4 md:py-2 select-none flex gap-4 items-center shadow-2xl">
                       {
                         recentProjects[active].projectName
                           .replace(/⭐/g, "")
@@ -154,6 +158,11 @@ export default function ProjectsTabs() {
                       )}
                     </span>
                   </div>
+                  <div className="absolute top-2 right-1 md:top-4 md:right-4 bg-white select-none flex gap-2 md:gap-4 px-2 py-1 md:px-4 md:py-2 font-bold text-sm flex-wrap shadow-2xl">
+                    {recentProjects[active].technologies.map((item) => (
+                      <span>{item}</span>
+                    ))}
+                  </div>
                 </div>
               </div>
             )}
@@ -175,9 +184,71 @@ export default function ProjectsTabs() {
                   .map((projectMap, index) => (
                     <TableRow key={projectMap.id}>
                       <TableCell className="font-medium">
-                        <Dialog>
-                          <DialogTrigger
-                            className="text-left"
+                        {activeTab !== "Recent" ? (
+                          <Dialog>
+                            <DialogTrigger className="text-left">
+                              {
+                                projectMap.projectName
+                                  .replace(/⭐/g, "")
+                                  .split(" - ")[0]
+                              }
+                            </DialogTrigger>
+                            <DialogContent className="w-[90%]">
+                              <DialogHeader>
+                                <DialogTitle className="text-left md:text-center">
+                                  {
+                                    projectMap.projectName
+                                      .replace(/⭐/g, "")
+                                      .split(" - ")[0]
+                                  }
+                                </DialogTitle>
+                                <DialogDescription>
+                                  {activeTab === "Recent" && (
+                                    <img
+                                      src={`${projectMap.projectName}.jpg`}
+                                      className="w-96 h-60 object-cover my-4 mx-auto"
+                                    />
+                                  )}
+                                  <div className="flex justify-between md:w-96 mx-auto flex-wrap gap-4">
+                                    <div className="flex gap-x-2 items-center">
+                                      {projectMap.technologies.map((item) => (
+                                        <span className="bg-gray-700 text-white px-2 py-1">
+                                          {item}
+                                        </span>
+                                      ))}
+                                    </div>
+                                    <div className="flex items-center gap-x-4">
+                                      <a
+                                        href={projectMap.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                      >
+                                        <Github
+                                          className="mx-auto hover:text-blue-600 transition-colors"
+                                          size={40}
+                                        />
+                                      </a>
+                                      {projectMap.website && (
+                                        <a
+                                          href={projectMap.website}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                        >
+                                          <CodeXml
+                                            className="mx-auto hover:text-green-600 transition-colors"
+                                            size={40}
+                                          />
+                                        </a>
+                                      )}
+                                    </div>
+                                  </div>
+                                </DialogDescription>
+                              </DialogHeader>
+                            </DialogContent>
+                          </Dialog>
+                        ) : (
+                          <span
+                            className="text-left cursor-pointer"
                             onClick={() => setActive(index)}
                           >
                             {
@@ -185,60 +256,8 @@ export default function ProjectsTabs() {
                                 .replace(/⭐/g, "")
                                 .split(" - ")[0]
                             }
-                          </DialogTrigger>
-                          <DialogContent className="w-[90%]">
-                            <DialogHeader>
-                              <DialogTitle className="text-left md:text-center">
-                                {
-                                  projectMap.projectName
-                                    .replace(/⭐/g, "")
-                                    .split(" - ")[0]
-                                }
-                              </DialogTitle>
-                              <DialogDescription>
-                                {activeTab === "Recent" && (
-                                  <img
-                                    src={`${projectMap.projectName}.jpg`}
-                                    className="w-96 h-60 object-cover my-4 mx-auto"
-                                  />
-                                )}
-                                <div className="flex justify-between md:w-96 mx-auto flex-wrap gap-4">
-                                  <div className="flex gap-x-2 items-center">
-                                    {projectMap.technologies.map((item) => (
-                                      <span className="bg-gray-700 text-white px-2 py-1">
-                                        {item}
-                                      </span>
-                                    ))}
-                                  </div>
-                                  <div className="flex items-center gap-x-4">
-                                    <a
-                                      href={projectMap.github}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                    >
-                                      <Github
-                                        className="mx-auto hover:text-blue-600 transition-colors"
-                                        size={40}
-                                      />
-                                    </a>
-                                    {projectMap.website && (
-                                      <a
-                                        href={projectMap.website}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                      >
-                                        <CodeXml
-                                          className="mx-auto hover:text-green-600 transition-colors"
-                                          size={40}
-                                        />
-                                      </a>
-                                    )}
-                                  </div>
-                                </div>
-                              </DialogDescription>
-                            </DialogHeader>
-                          </DialogContent>
-                        </Dialog>
+                          </span>
+                        )}
                       </TableCell>
                       <TableCell className="text-center">
                         <a
