@@ -17,7 +17,7 @@ export default function Contact() {
       </div>
       <form
         onSubmit={handleSubmit}
-        className="bg-white rounded-2xl shadow-2xl p-8 max-w-xl mx-auto"
+        className="bg-white rounded-2xl shadow-2xl p-8 max-w-screen-xl mx-auto"
       >
         <div className="space-y-6">
           <div>

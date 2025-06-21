@@ -3,7 +3,7 @@ import { Typography } from "@material-tailwind/react";
 import * as ROUTES from "../constants/routes";
 export function SimpleFooter() {
   return (
-    <footer className="container flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 border-t border-blue-gray-50 px-4 py-6 md:px-8 md:py-8  text-center md:justify-between  max-w-screen-xl mx-auto">
+    <footer className="container flex flex-row flex-wrap items-center justify-between border-t border-blue-gray-50 px-4 py-6 md:px-8 md:py-8  text-center md:justify-between  max-w-screen-xl mx-auto">
       <Typography color="blue-gray" className="font-normal">
         &copy; 2025 Luis M.
       </Typography>
