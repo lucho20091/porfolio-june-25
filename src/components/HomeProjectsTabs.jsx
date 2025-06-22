@@ -183,7 +183,10 @@ export default function ProjectsTabs() {
                   )
                   .map((projectMap, index) => (
                     <TableRow key={projectMap.id}>
-                      <TableCell className="font-medium">
+                      <TableCell
+                        className="font-medium"
+                        onClick={() => setActive(index)}
+                      >
                         {activeTab !== "Recent" ? (
                           <Dialog>
                             <DialogTrigger className="text-left">
@@ -247,10 +250,7 @@ export default function ProjectsTabs() {
                             </DialogContent>
                           </Dialog>
                         ) : (
-                          <span
-                            className="text-left cursor-pointer"
-                            onClick={() => setActive(index)}
-                          >
+                          <span className="text-left cursor-pointer">
                             {
                               projectMap.projectName
                                 .replace(/⭐/g, "")
